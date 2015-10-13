@@ -47,11 +47,11 @@ edit postgres config to allow md5 auth for local
 > sudo nano /etc/postgresql/9.X/main/pg_hba.conf
 
 change
-> #"local" is for Unix domain socket connections only  
+> \#"local" is for Unix domain socket connections only  
 > local   all             all                                     peer
 
 to
-> #"local" is for Unix domain socket connections only  
+> \#"local" is for Unix domain socket connections only  
 > local   all             all                                     md5
 
 >sudo service postgresql restart
@@ -74,6 +74,8 @@ create environment variables
 >export PASSWORD="database pass"   
 >export MAILGUN_URL="mailgun api url"  
 >export MAILGUN_API="mailgun api key"  
+>export MAILGUN_DOMAIN="mailgun domain"  
+>export MAILGUN_EMAIL="mailgun email"  
 
 install php (used by gameq)
 > sudo apt-get install php5 php5-pgsql
